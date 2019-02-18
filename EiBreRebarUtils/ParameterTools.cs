@@ -33,8 +33,10 @@ namespace EiBreRebarUtils
 
                     string rebarNumber1 = element.get_Parameter(BuiltInParameter.REBAR_NUMBER).AsString();
                     string partition1 = element.get_Parameter(BuiltInParameter.NUMBER_PARTITION_PARAM).AsString();
+                    string shapeCode = element.get_Parameter(BuiltInParameter.REBAR_SHAPE).AsString();
+                    //Vet ikke om denne parameteren er helt rett, men det viser hva jeg mener i alle fall
                     string combinedParameter = "";
-                    if (partition1.Contains("LM") || partition1.Contains("RM"))
+                    if (partition1.Contains("LM") || partition1.Contains("RM")|| shapeCode.Contains("LM"))
                     {
                         combinedParameter = partition1;
                     }
